@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+    <title>Mozilla Firefox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sitio">
+        <header id="inicio">
+            <img src="banner.jpg" alt="Banner del sitio sobre Mozilla Firefox">
+        </header>
+
+        <div class="a">
+            <main class="container" id="cont">
+                <h2>Formulario de registro</h2>
+                <form id="formulario" novalidate>
+                    <fieldset>
+                        <legend>Entrada de datos</legend>
+
+                        <label for="nombre">Nombre</label><br>
+                        <input type="text" id="nombre" name="Nombre">
+                        <span class="error" id="error-nombre" aria-live="polite"></span>
+
+                        <label for="ci">CI</label><br>
+                        <input type="text" id="ci" name="CI" inputmode="numeric">
+                        <span class="error" id="error-ci" aria-live="polite"></span>
+
+                        <label for="contrasenna">Contraseña</label><br>
+                        <input type="password" id="contrasenna" name="Contraseña">
+                        <span class="error" id="error-contrasenna" aria-live="polite"></span>
+
+                        <label for="confirmar">Confirmar contraseña</label><br>
+                        <div class="fila-botones">
+                            <input type="password" id="confirmar" name="Confirmar contraseña">
+                            <button type="submit">Enviar</button>
+                            <button type="reset" id="limpiar">Limpiar</button>
+                        </div>
+                        <span class="error" id="error-confirmar" aria-live="polite"></span>
+
+                        <div id="mensaje-general" role="status" aria-live="polite"></div>
+                    </fieldset>
+                </form>
+            </main>
+
+            <nav class="links">
+                <a href="index.html">Inicio</a>
+                <a href="index2.html">Formulario de registro</a>
+            </nav>
+        </div>
+
+        <footer class="pie">Evaluacion final realizada por Nicole Rios Rodriguez</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

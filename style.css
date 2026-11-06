@@ -1,0 +1,125 @@
+* { box-sizing: border-box; }
+
+body {
+    background-color: #393C3E;
+    margin: 0;
+    padding: 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor central: el sitio queda centrado y a los lados se ve el gris del body */
+.sitio {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    /* Misma altura en todas las páginas: el sitio ocupa al menos toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px);
+}
+
+.sitio > header img {
+    display: block;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    background-color: #1C6087;
+}
+
+.a {
+    display: flex;
+    flex-direction: row;
+    flex: 1;               /* ocupa todo el espacio disponible entre banner y pie */
+    min-height: 450px;     /* altura mínima igual en ambas páginas */
+}
+
+.container {
+    flex: 1;
+    background-color: #D5E6F5;
+    padding: 30px;
+}
+
+.links {
+    flex: 0 0 24%;
+    background-color: #1C6087;
+    padding: 20px;
+}
+
+.links a {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.pie {
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    margin: 20px 10px 0;
+    text-align: justify;
+}
+
+label, input, button {
+    margin: 10px;
+}
+
+fieldset {
+    border: 1px solid #1C6087;
+}
+
+input {
+    max-width: calc(100% - 20px);
+}
+
+/* Mensajes de validación */
+.error {
+    display: block;
+    margin: 0 10px;
+    color: #b00020;
+    font-size: 0.9em;
+    min-height: 1em;
+}
+
+input.invalido {
+    border: 2px solid #b00020;
+}
+
+#mensaje-general {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 2.5em;
+}
+
+#mensaje-general:empty {
+    padding: 0;
+}
+
+#mensaje-general.ok {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#mensaje-general.fallo {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    body { padding: 0; }
+
+    .sitio { min-height: 100vh; }
+
+    .a { flex-direction: column; min-height: 0; }
+
+    .links { flex: none; width: 100%; order: -1; }
+
+    .container { padding: 15px; }
+
+    p { margin-left: 0; margin-right: 0; text-align: left; }
+}
